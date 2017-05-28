@@ -12,6 +12,9 @@ public class Window {
 
     private String color;
 
+    public int calculateHeight(){
+        return topCoordinate - botoomCoordinate;
+    }
 
 
     public Window(int leftCoordinate, int rightCoordinate, int topCoordinate, int botoomCoordinate, String color) {
