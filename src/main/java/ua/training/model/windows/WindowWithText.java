@@ -27,4 +27,12 @@ public class WindowWithText extends Window{
     public void setTextColor(String textColor) {
         this.textColor = textColor;
     }
+
+    @Override
+    public String toString() {
+        return "WindowWithText{" +
+                "testInWindow='" + testInWindow + '\'' +
+                ", textColor='" + textColor + '\'' +
+                '}';
+    }
 }
