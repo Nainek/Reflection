@@ -3,7 +3,9 @@ package ua.training.model.windows;
 
 import ua.training.controller.RunnableMethod;
 
-public class Window {
+import java.io.Serializable;
+
+public class Window implements Serializable{
 
     private int leftCoordinate;
     private int rightCoordinate;
