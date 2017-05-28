@@ -1,7 +1,7 @@
 package ua.training.model.windows;
 
 
-
+import ua.training.controller.RunnableMethod;
 
 public class Window {
 
@@ -12,10 +12,18 @@ public class Window {
 
     private String color;
 
+    @RunnableMethod
     public int calculateHeight(){
         return topCoordinate - botoomCoordinate;
     }
 
+    public Window() {
+        this.leftCoordinate = 0;
+        this.rightCoordinate = 0;
+        this.topCoordinate = 0;
+        this.botoomCoordinate = 0;
+        this.color = "Default";
+    }
 
     public Window(int leftCoordinate, int rightCoordinate, int topCoordinate, int botoomCoordinate, String color) {
         this.leftCoordinate = leftCoordinate;
