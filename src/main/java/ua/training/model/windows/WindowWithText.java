@@ -3,21 +3,28 @@ package ua.training.model.windows;
 
 public class WindowWithText extends Window{
 
-    private String testInWindow;
+    private String textInWindow;
     private String textColor;
 
-    public WindowWithText(int leftCoordinate, int rightCoordinate, int topCoordinate, int botoomCoordinate, String color, String testInWindow, String textColor) {
+    public WindowWithText(int leftCoordinate, int rightCoordinate, int topCoordinate, int botoomCoordinate, String color, String textInWindow, String textColor) {
         super(leftCoordinate, rightCoordinate, topCoordinate, botoomCoordinate, color);
-        this.testInWindow = testInWindow;
+        this.textInWindow = textInWindow;
         this.textColor = textColor;
     }
+    public WindowWithText() {
+        super();
+        this.textInWindow = "Default text";
+        this.textColor = "Default text color";
+    }
+
+
 
     public String getTestInWindow() {
-        return testInWindow;
+        return textInWindow;
     }
 
     public void setTestInWindow(String testInWindow) {
-        this.testInWindow = testInWindow;
+        this.textInWindow = testInWindow;
     }
 
     public String getTextColor() {
@@ -31,7 +38,7 @@ public class WindowWithText extends Window{
     @Override
     public String toString() {
         return "WindowWithText{" +
-                "testInWindow='" + testInWindow + '\'' +
+                "testInWindow='" + textInWindow + '\'' +
                 ", textColor='" + textColor + '\'' +
                 '}';
     }
