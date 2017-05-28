@@ -61,4 +61,15 @@ public class Window {
     public void setColor(String color) {
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Window{" +
+                "leftCoordinate=" + leftCoordinate +
+                ", rightCoordinate=" + rightCoordinate +
+                ", topCoordinate=" + topCoordinate +
+                ", botoomCoordinate=" + botoomCoordinate +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }
