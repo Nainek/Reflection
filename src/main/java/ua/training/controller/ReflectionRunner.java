@@ -8,9 +8,9 @@ import java.lang.reflect.*;
 public class ReflectionRunner {
 
     View view = new View();
-    private static String className;
-    private static Class clazz;
-    private static Object someObject;
+    private  String className;
+    private  Class clazz;
+    private Object someObject;
     public ReflectionRunner() {
         className = "ua.training.model.windows.Window";
         try {
@@ -30,6 +30,7 @@ public class ReflectionRunner {
     public static void main(String[] args) {
         ReflectionRunner reflectionRunner = new ReflectionRunner();
         reflectionRunner.printSuperclassSimpleName();
+
 //        reflectionRunner.printFieldsWithTypeAndAnnotations();
 //        reflectionRunner.printModifiers();
 //        reflectionRunner.printMethodsWithTypesAndAnnotations();
@@ -37,6 +38,7 @@ public class ReflectionRunner {
 //        reflectionRunner.printImplementedInterfaces();
 //        reflectionRunner.printConstructors();
 //        reflectionRunner.printPackageAndSimpleName();
+//        reflectionRunner.invokeMethodWithAnnotation();
     }
 
     public void printConstructors(){
@@ -116,6 +118,24 @@ public class ReflectionRunner {
             for(Annotation annotation : annotations){
                 view.printMessage("Annotation:" + annotation.getClass().getSimpleName()+" ");
                 view.printInNewLineMessage("");
+            }
+        }
+    }
+
+    public void invokeMethodWithAnnotation() {
+        for( Method m : clazz.getMethods() ){
+            if( m.isAnnotationPresent(RunnableMethod.class)){
+                Object obj = null;
+                try {
+                    obj = m.invoke(someObject);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+                if( obj!= null){
+                    System.out.println(obj);
+                }
             }
         }
     }
