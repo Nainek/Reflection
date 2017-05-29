@@ -30,13 +30,13 @@ public class ReflectionRunner {
     public static void main(String[] args) {
         ReflectionRunner reflectionRunner = new ReflectionRunner();
         reflectionRunner.printSuperclassSimpleName();
-        reflectionRunner.printFieldsWithTypeAndAnnotations();
-        reflectionRunner.printModifiers();
-        reflectionRunner.printMethodsWithTypesAndAnnotations();
-        reflectionRunner.printAnnotations();
-        reflectionRunner.printImplementedInterfaces();
-        reflectionRunner.printConstructors();
-        reflectionRunner.printPackageAndSimpleName();
+//        reflectionRunner.printFieldsWithTypeAndAnnotations();
+//        reflectionRunner.printModifiers();
+//        reflectionRunner.printMethodsWithTypesAndAnnotations();
+//        reflectionRunner.printAnnotations();
+//        reflectionRunner.printImplementedInterfaces();
+//        reflectionRunner.printConstructors();
+//        reflectionRunner.printPackageAndSimpleName();
     }
 
     public void printConstructors(){
